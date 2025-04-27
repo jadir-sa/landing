@@ -1,0 +1,926 @@
+
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl" ng-app="JadirApp">
+    <head>
+        <!-- Basic page needs ===========================-->
+        <meta charset="UTF-8">
+        <title>منصة جدير المتكاملة</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="keywords" content="" />
+        <meta name="copyright" content="" />
+        <meta http-equiv="content-language" content="ar">
+        <!-- Fave Icons ================================-->
+        <link rel="shortcut icon" href="assets/images/favicon.png" />
+        <!-- CSS Files ================================-->
+        <link rel="stylesheet" href="css/tabler.rtl.css">
+        <link rel="stylesheet" href="css/tabler-flags.rtl.css">
+        <link rel="stylesheet" href="css/tabler-payments.rtl.css">
+        <link rel="stylesheet" href="css/tabler-social.rtl.css">
+        <link rel="stylesheet" href="css/tabler-vendors.rtl.css">
+        <link rel="stylesheet" href="css/demo.rtl.css">
+        <link rel="stylesheet" href="css/tabler-icons.min.css">
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="css/font.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <link rel="stylesheet" href="css/toast.style.css"/>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/angular.min.js"></script>
+        <script src="js/angular-aria.js"></script>
+        <script src="js/globalcontroller.js"></script>
+        <script src="js/toast.script.js"></script>
+    </head>
+
+    <style>
+        .font-xxl {
+            font-size: 40px;
+            line-height: 1;
+        }
+
+        .logo-marquee {
+            -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+            mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+            overflow: hidden;
+            position: relative;
+            /* background: #fff; */
+            height: 100%;
+            direction: ltr;
+        }
+
+        .logo-track {
+            display: flex;
+            width: max-content;
+            animation: scroll-left 20s linear infinite;
+        }
+
+        .logo-marquee:hover .logo-track {
+            animation-play-state: paused;
+        }
+
+        .logo-track img {
+            height: 100px;
+            margin: 0 50px;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 450px) {
+            .font-xxl {
+                font-size: 27px;
+            }
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+
+    <body class="bg-white">
+        <!-- Start Header -->
+        <header>
+            <nav class="navbar navbar-expand-lg border-bottom-0 shadow-none">
+                <div class="container">
+                    <a class="navbar-brand me-md-4" href="index.html">
+                        <img src="img/logo.png" alt="Jadir" width="80">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-3"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 6h10" /><path d="M4 12h16" /><path d="M7 12h13" /><path d="M4 18h10" /></svg>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">الرئيسية</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">لماذا جدير؟</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">القطاعات</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">الأسعار</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">تواصل معنا</a>
+                            </li>
+                        </ul>
+                        <div class="d-grid d-md-block gap-3">
+                            <a href="#" class="px-2">EN</a>
+                            <a href="#" class="btn btn-primary rounded-3">أنشئ موقعك</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- End Header -->
+
+        <!-- Start Main -->
+        <main>
+            <!-- Start Hero Section -->
+            <section data-aos="zoom-in" id="hero" class="h-auto"> 
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-md-2 rounded-4 p-5 g-0" style="background: #ECEEFC;">
+                        <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="col align-items-center align-items-md-start d-flex flex-column justify-content-center order-1 order-md-0">
+                            <h1 class="text-center text-md-start text-primary font-xxl">اسلوب جديد<br>للمسابقات والإستبيانات</h1>
+                            <p class="text-center text-md-start">أنشئ مسابقات و دروس متنوعة بهوية مستقلة من خلال منصة إلكترونية تفاعلية</p>
+                            <a href="#" class="btn btn-primary rounded-3">أنشئ موقعك الآن</a>
+                        </div>
+                        <div class="col text-center">
+                            <img data-aos="fade-up" data-aos-anchor-placement="center-bottom" src="img/img-2.svg" alt="Jadir">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Hero Section -->
+
+            <!-- Start Logos Slider Section -->
+            <section id="logo-slider" class="d-flex h-20vh align-items-center">
+                <div class="container">
+                    <!-- Slider main container -->
+                    <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="logo-marquee">
+                        <div class="logo-track">
+                          <img src="https://sparkle.sa/wp-content/uploads/2024/12/07.jpg" alt="Logo 1">
+                          <img src="https://sparkle.sa/wp-content/uploads/2024/12/09.jpg" alt="Logo 2">
+                          <img src="https://sparkle.sa/wp-content/uploads/2024/12/02.jpg" alt="Logo 3">
+                          <img src="https://sparkle.sa/wp-content/uploads/2024/12/05.jpg" alt="Logo 4">
+                          <img src="https://sparkle.sa/wp-content/uploads/2024/12/01.jpg" alt="Logo 5">
+                          <img src="https://sparkle.sa/wp-content/uploads/2024/12/017.jpg" alt="Logo 5">
+                          <!-- التكرار -->
+                          <img src="https://sparkle.sa/wp-content/uploads/2024/12/07.jpg" alt="Logo 1">
+                          <img src="https://sparkle.sa/wp-content/uploads/2024/12/09.jpg" alt="Logo 2">
+                          <img src="https://sparkle.sa/wp-content/uploads/2024/12/02.jpg" alt="Logo 3">
+                          <img src="https://sparkle.sa/wp-content/uploads/2024/12/05.jpg" alt="Logo 4">
+                          <img src="https://sparkle.sa/wp-content/uploads/2024/12/01.jpg" alt="Logo 5">
+                          <img src="https://sparkle.sa/wp-content/uploads/2024/12/017.jpg" alt="Logo 5">
+                        </div>
+                    </div>                      
+                </div>
+            </section>
+            <!-- End Logos Slider Section -->
+
+            <!-- Start Features Section -->
+            <section data-aos="zoom-in" id="feature-1" class="h-auto p-4" style="background: #F6F8FB;">
+                <div class="container">
+                    <h1 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="text-center text-primary">ميّزات تكمّل موقعك</h1>
+                    <div class="row row-cols-1 row-cols-md-2 g-0">
+                        <div class="col order-1 order-md-0 d-flex flex-column justify-content-center">
+                            <h1 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="text-center text-md-start text-primary m-0">تعدد اللغات</h1>
+                            <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="text-center text-md-start">أنشئ موقعك بأكثر من 30 لغة وبكل سهولة وبدون أي تعقيدات تقنية</p>
+                        </div>
+                        <div class="col order-0 order-md-1 text-center">
+                            <img data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" src="img/img-1.svg">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="feature-2" class="h-auto p-4">
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-md-2 g-0">
+                        <div class="col text-center">
+                            <img data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" src="img/img-2.svg">
+                        </div>
+                        <div class="col d-flex flex-column justify-content-center">
+                            <h1 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="text-center text-md-start text-primary m-0">تخصيص المظهر</h1>
+                            <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="text-center text-md-start">تحكّم بسهولة بتصميم موقعك عبر تخصيص المظهر</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section data-aos="zoom-in" id="feature-3" class="h-auto p-4" style="background: #F6F8FB;">
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-md-2 g-0">
+                        <div class="col order-1 order-md-0 d-flex flex-column justify-content-center">
+                            <h1 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="text-center text-md-start text-primary m-0">الإستقلالية</h1>
+                            <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="text-center text-md-start">لوحة تحكم مستقلة واسم نطاق خاص لكل عميل</p>
+                        </div>
+                        <div class="col order-0 order-md-1 text-center">
+                            <img data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" src="img/img-3.svg">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="feature-4" class="h-auto p-4">
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-md-2 g-0">
+                        <div class="col text-center">
+                            <img data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" src="img/img-4.svg">
+                        </div>
+                        <div class="col d-flex flex-column justify-content-center">
+                            <h1 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="text-center text-md-start text-primary m-0">الشمولية</h1>
+                            <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="text-center text-md-start">مناسب لجميع المنظومة التعليمية ومنظمي الحج والعمرة</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section data-aos="zoom-in" id="feature-5" class="h-auto p-4" style="background: #F6F8FB;">
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-md-2 g-0">
+                        <div class="col order-1 order-md-0 d-flex flex-column justify-content-center">
+                            <h1 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="text-center text-md-start text-primary m-0">بنك الأسئلة</h1>
+                            <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="text-center text-md-start">قاعدة بيانات كبيرة مع سجل المشاركات لكل مستفيد</p>
+                        </div>
+                        <div class="col order-0 order-md-1 text-center">
+                            <img data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" src="img/img-3.svg">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Features Section -->
+
+            <!-- Start Sign up Steps Section -->
+            <section id="feature-4" class="h-auto p-4">
+                <div class="container">
+                    <div class="text-center mb-5">
+                        <h1 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="text-primary m-0">كل ما تحتاجه بـ 3 خطوات</h1>
+                        <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="text-primary">قدم تجربة فريدة وفعالة من خلال إمكانية إنشاء مسابقات او اختبارات او استطلاع الرأي</p>
+                    </div>
+                    <div class="row row-cols-1 row-cols-md-3 g-0">
+                        <div class="col text-center">
+                            <img data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" src="img/number-1.svg" width="100">
+                            <h1 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="text-primary">أنشئ حسابك</h1>
+                        </div>
+                        <div class="col text-center">
+                            <img data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" src="img/number-2.svg" width="100">
+                            <h1 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="text-primary">اضبط اعدادات موقعك</h1>
+                        </div>
+                        <div class="col text-center">
+                            <img data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" src="img/number-3.svg" width="100">
+                            <h1 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="text-primary">أضف المحتوى الخاص بك</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Sign up Steps Section -->
+
+            <!-- Start Pricing Section -->
+            <section data-aos="zoom-in" id="feature-5" class="h-auto p-4" style="background: #F6F8FB;">
+                <div class="container">
+                    <!-- Start Call To Action Baner -->
+                    <div data-aos="zoom-in" id="cta" class="bg-white rounded-3 p-5">
+                        <div class="row row-cols-1 row-cols-md-2 align-items-center g-0">
+                            <div class="col text-center text-md-start">
+                                <h1 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="text-primary m-0">أمتلك موقعك الآن</h1>
+                                <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="my-3 m-md-0">أنشئ مسابقات و دروس متنوعة بهوية مستقلة بأدوات مرنة وحلول متكاملة</p>
+                            </div>
+                            <div class="col text-center text-md-end">
+                                <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" href="#" class="btn btn-primary rounded-3">أنشئ موقعك</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Call To Action Baner -->
+
+                    <div class="text-center text-md-start my-3">
+                        <h1 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="text-primary m-0">الباقات</h1>
+                        <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="m-0">اختر ما يناسبك من باقتنا</p>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="row row-cards row-cols-1 row-cols-md-3 g-0">
+                        <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="col">
+                            <div class="card card-md rounded-4 border-0 shadow-none">
+                                <div class="card-body text-center p-4">
+                                    <div class="text-uppercase text-secondary font-weight-medium">
+                                        باقة صغيرة
+                                    </div>
+    
+                                    <div class="my-2">
+                                        <span class="display-6 fw-bold me-1">
+                                            10000.00
+                                        </span>
+                                        <span>
+                                            SAR
+                                        </span>
+                                    </div>
+    
+                                    <ul class="list-unstyled lh-lg text-start">
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                مدة الاشتراك (أيام)
+                                            </span>
+                                            <span>
+                                                30
+                                            </span>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                عدد اقسام المسابقات
+                                            </span>
+                                            <span>
+                                                4
+                                            </span>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                عدد المساباقات بالمجموعة
+                                            </span>
+                                            <span>
+                                                2
+                                            </span>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                عدد الاسئلة بالمسابقة
+                                            </span>
+                                            <span>
+                                                2
+                                            </span>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                عدد المتسابقين في كل مسابقة
+                                            </span>
+                                            <span>
+                                                2
+                                            </span>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                عدد الصفحات التعريفية التى يمكن عملها
+                                            </span>
+                                            <span>
+                                                2
+                                            </span>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                عدد المستخدمين فى لوحة التحكم
+                                            </span>
+                                            <span>
+                                                2
+                                            </span>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                إجمالى التخزين وحفظ البيانات (ميغا بايت)
+                                            </span>
+                                            <span>
+                                                100.00
+                                            </span>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                عدد المشتركين فى الموقع
+                                            </span>
+                                            <span>
+                                                2
+                                            </span>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                امكانية التحكم فى تصميم موقعك
+                                            </span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M5 12l5 5l10 -10"></path>
+                                                </svg>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                العلامة التجارية
+                                            </span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M5 12l5 5l10 -10"></path>
+                                                </svg>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                تجريبية
+                                            </span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon text-red" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M18 6l-12 12"></path>
+                                                    <path d="M6 6l12 12"></path>
+                                                </svg>
+                                        </li>
+                                    </ul>
+    
+    
+                                    <div class="btn mt-4 w-100">
+                                        <a href="/MyPayment/InitiatePackagePayment?packageId=35">
+                                            اشترك
+                                        </a>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="col">
+                            <div class="card card-md rounded-4 border-0 shadow-none">
+                                <div class="card-body text-center p-4">
+                                    <div class="text-uppercase text-secondary font-weight-medium">
+                                        باقة ذهبية
+                                    </div>
+    
+                                    <div class="my-2">
+                                        <span class="display-6 fw-bold me-1">
+                                            500.00
+                                        </span>
+                                        <span>
+                                            SAR
+                                        </span>
+                                    </div>
+    
+                                    <ul class="list-unstyled lh-lg text-start">
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                مدة الاشتراك (أيام)
+                                            </span>
+                                            <span>
+                                                60
+                                            </span>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                عدد اقسام المسابقات
+                                            </span>
+                                            <span>
+                                                4
+                                            </span>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                عدد المساباقات بالمجموعة
+                                            </span>
+                                            <span>
+                                                5
+                                            </span>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                عدد الاسئلة بالمسابقة
+                                            </span>
+                                            <span>
+                                                2
+                                            </span>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                عدد المتسابقين في كل مسابقة
+                                            </span>
+                                            <span>
+                                                2
+                                            </span>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                عدد الصفحات التعريفية التى يمكن عملها
+                                            </span>
+                                            <span>
+                                                2
+                                            </span>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                عدد المستخدمين فى لوحة التحكم
+                                            </span>
+                                            <span>
+                                                2
+                                            </span>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                إجمالى التخزين وحفظ البيانات (ميغا بايت)
+                                            </span>
+                                            <span>
+                                                30.00
+                                            </span>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                عدد المشتركين فى الموقع
+                                            </span>
+                                            <span>
+                                                2
+                                            </span>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                امكانية التحكم فى تصميم موقعك
+                                            </span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M5 12l5 5l10 -10"></path>
+                                                </svg>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                العلامة التجارية
+                                            </span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M5 12l5 5l10 -10"></path>
+                                                </svg>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                تجريبية
+                                            </span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon text-red" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M18 6l-12 12"></path>
+                                                    <path d="M6 6l12 12"></path>
+                                                </svg>
+                                        </li>
+                                    </ul>
+    
+    
+                                    <div class="btn mt-4 w-100">
+                                        <a href="/MyPayment/InitiatePackagePayment?packageId=37">
+                                            اشترك
+                                        </a>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="col">
+                            <div class="card card-md rounded-4 border-0 shadow-none">
+                                <div class="card-body text-center p-4">
+                                    <div class="text-uppercase text-secondary font-weight-medium">
+                                        باقة فارغة
+                                    </div>
+    
+                                    <div class="my-2">
+                                        <span class="display-6 fw-bold me-1">
+                                            20.00
+                                        </span>
+                                        <span>
+                                            SAR
+                                        </span>
+                                    </div>
+    
+                                    <ul class="list-unstyled lh-lg text-start">
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                مدة الاشتراك (أيام)
+                                            </span>
+                                            <span>
+                                                10
+                                            </span>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                عدد اقسام المسابقات
+                                            </span>
+                                            <span>
+                                                1
+                                            </span>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                عدد المساباقات بالمجموعة
+                                            </span>
+                                            <span>
+                                                1
+                                            </span>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                عدد الاسئلة بالمسابقة
+                                            </span>
+                                            <span>
+                                                1
+                                            </span>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                عدد المتسابقين في كل مسابقة
+                                            </span>
+                                            <span>
+                                                5
+                                            </span>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                عدد الصفحات التعريفية التى يمكن عملها
+                                            </span>
+                                            <span>
+                                                2
+                                            </span>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                عدد المستخدمين فى لوحة التحكم
+                                            </span>
+                                            <span>
+                                                1
+                                            </span>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                إجمالى التخزين وحفظ البيانات (ميغا بايت)
+                                            </span>
+                                            <span>
+                                                1.00
+                                            </span>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                عدد المشتركين فى الموقع
+                                            </span>
+                                            <span>
+                                                5
+                                            </span>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                امكانية التحكم فى تصميم موقعك
+                                            </span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M5 12l5 5l10 -10"></path>
+                                                </svg>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                العلامة التجارية
+                                            </span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon text-red" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M18 6l-12 12"></path>
+                                                    <path d="M6 6l12 12"></path>
+                                                </svg>
+                                        </li>
+    
+                                        <li class="d-flex justify-content-between">
+                                            <span>
+                                                تجريبية
+                                            </span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon text-red" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M18 6l-12 12"></path>
+                                                    <path d="M6 6l12 12"></path>
+                                                </svg>
+                                        </li>
+                                    </ul>
+    
+    
+                                    <div class="btn mt-4 w-100">
+                                        <a href="/MyPayment/InitiatePackagePayment?packageId=38">
+                                            اشترك
+                                        </a>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center my-3">
+                        <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" href="#" class="btn btn-primary rounded-3">جميع الباقات</a>
+                    </div>
+                </div>
+            </section>
+            <!-- End Pricing Section -->
+
+            <!-- Start Pricing Section -->
+            <section id="feature-5" class="h-auto p-4">
+                <div class="container">
+                    <!-- Start Call To Action Baner -->
+                    <div data-aos="zoom-in" id="cta" class="rounded-3 p-5" style="background: #ECEEFC;">
+                        <div class="row row-cols-1 row-cols-md-2 align-items-center g-0">
+                            <div class="col text-center text-md-start">
+                                <h1 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="text-primary m-0">تواصل معنا</h1>
+                                <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="my-3 m-md-0">نحن جاهزون للرد عليكم في اسرع وقت ممكن، يسعدنا الإستماع لكم.</p>
+                            </div>
+                            <div class="col text-center text-md-end">
+                                <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" href="contact.html" class="btn btn-primary rounded-3">اتصل بنـــــــا</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Call To Action Baner -->
+
+                    <!-- Start F&Q Section -->
+                    <h1 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="text-primary text-center my-3">الأسئلة الشائعة</h1>
+                    <!-- Start F&Q Items -->
+                    <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="accordion" id="accordionExample">
+                        <!-- Start F&Q Item -->
+                        <div class="accordion-item rounded-3 border mb-3">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-995" aria-expanded="false" aria-controls="collapse-995">
+                                ما هي فكرة الموقع؟
+                            </button>
+                          </h2>
+                          <div id="collapse-995" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p class="mb-0">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى</p>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End F&Q Item -->
+
+                        <!-- Start F&Q Item -->
+                        <div class="accordion-item rounded-3 border mb-3">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-996" aria-expanded="false" aria-controls="collapse-996">
+                                ما هي أهم الفئات الموجهة إليها الخدمة؟
+                            </button>
+                          </h2>
+                          <div id="collapse-996" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p class="mb-0">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى</p>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End F&Q Item -->
+
+                        <!-- Start F&Q Item -->
+                        <div class="accordion-item rounded-3 border mb-3">
+                            <h2 class="accordion-header">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-997" aria-expanded="false" aria-controls="collapse-997">
+                                هل الموقع يوفر لي إنشاء موقع بخصوصية تمامة؟
+                              </button>
+                            </h2>
+                            <div id="collapse-997" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                  <p class="mb-0">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى</p>
+                              </div>
+                            </div>
+                        </div>
+                        <!-- End F&Q Item -->
+
+                        <!-- Start F&Q Item -->
+                        <div class="accordion-item rounded-3 border mb-3">
+                            <h2 class="accordion-header">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-998" aria-expanded="false" aria-controls="collapse-998">
+                                هل يمكنني تجربة الخدمة مجانا؟
+                              </button>
+                            </h2>
+                            <div id="collapse-998" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                  <p class="mb-0">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى</p>
+                              </div>
+                            </div>
+                        </div>
+                        <!-- End F&Q Item -->
+
+                        <!-- Start F&Q Item -->
+                        <div class="accordion-item rounded-3 border mb-3">
+                            <h2 class="accordion-header">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-999" aria-expanded="false" aria-controls="collapse-999">
+                                هل يمكنني إضافة صورة في الموقع الخاص بي؟
+                              </button>
+                            </h2>
+                            <div id="collapse-999" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                  <p class="mb-0">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى</p>
+                              </div>
+                            </div>
+                        </div>
+                        <!-- End F&Q Item -->
+                    </div>
+                    <!-- End F&Q Items -->
+                    <!-- End F&Q Section -->
+                </div>
+            </section>
+
+            <section id="trail" class="d-flex h-40vh align-items-center">
+                <div class="container text-center">
+                    <h1 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="text-primary font-xxl text-center">نضمن لك تجربة سلسة سهلة في<br>ادارة مسابقاتك وإستبياناتك</h1>
+                    <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" href="#" class="btn btn-primary rounded-3 my-3">احجز تجربتك</a>
+                </div>
+            </section>
+        </main>
+        <!-- End Main -->
+
+        <!-- Start Footer -->
+         <footer>
+            <div class="container">
+                <div class="row g-0 mb-3">
+                    <div class="col-12 col-md-3">
+                        <img src="img/logo.png" alt="Jadir" width="100">
+                        <p class="text-primary my-3">أنشئ مسابقات و دروس متنوعة بهوية مستقلة من خلال منصة إلكترونية تفاعلية</p>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <h2 class="text-primary">المنتج</h2>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                              <a class="nav-link text-primary p-0" href="#">نظام المسابقات</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link text-primary p-0" href="#">نظام الإستبيانات</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link text-primary p-0" href="#">إدارة المشتركين</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <h2 class="text-primary">حالات الاستخدام</h2>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                              <a class="nav-link text-primary p-0" href="#">منظمي الحج والعمرة</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link text-primary p-0" href="#">مدارس ومعاهد</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link text-primary p-0" href="#">حلقات تحفيظ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <h2 class="text-primary">جدير</h2>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                              <a class="nav-link text-primary p-0" href="#">تواصل معنا</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link text-primary p-0" href="#">شروط الإستخدام</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link text-primary p-0" href="#">سياسة الخصوصية</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row row-cols-1 row-cols-md-2 g-0 pb-3">
+                    <div class="col">
+                        <p class="text-primary text-center text-md-start m-0">&copy; <span>2025</span> منصة جدير . حقوق النشر محفوظة</p>
+                    </div>
+                    <div class="col">
+                        <ul class="d-flex justify-content-center justify-content-md-end p-0 m-0">
+                            <li class="list-unstyled mx-2 ms-md-3">
+                                <a href="#" class="text-decoration-none text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" /></svg>
+                                    <span>لينكد إن</span>
+                                </a>
+                            </li>
+                            <li class="list-unstyled mx-2 ms-md-3">
+                                <a href="#" class="text-decoration-none text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
+                                    <span>إكس</span>
+                                </a>
+                            </li>
+                            <li class="list-unstyled mx-2 ms-md-3">
+                                <a href="#" class="text-decoration-none text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg>
+                                    <span>انستجرام</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+         </footer>
+        <!-- End Footer -->
+
+        <script src="js/tabler.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="js/swiper-bundle.min.js"></script>
+        <script src="js/swiper.js"></script>
+        <script src="js/signalr.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+
+        <script src="/js/site.js"></script>
+    
+    </body>
+</html>
